@@ -1,8 +1,10 @@
 package io.github.GuilhermeHNS.controleAcesso.controllers;
 
 import io.github.GuilhermeHNS.controleAcesso.domain.user.AuthenticationDTO;
+import io.github.GuilhermeHNS.controleAcesso.domain.user.LoginResponseDTO;
 import io.github.GuilhermeHNS.controleAcesso.domain.user.RegisterDTO;
 import io.github.GuilhermeHNS.controleAcesso.domain.user.User;
+import io.github.GuilhermeHNS.controleAcesso.infra.security.TokenService;
 import io.github.GuilhermeHNS.controleAcesso.repositories.UserRepository;
 import jakarta.validation.Valid;
 import org.springframework.beans.factory.annotation.Autowired;
@@ -23,13 +25,17 @@ public class AuthenticationController {
 
     @Autowired
     private UserRepository repository;
+    @Autowired
+    private TokenService tokenService;
 
     @PostMapping("/login")
     public ResponseEntity login(@RequestBody  @Valid AuthenticationDTO data){
         var userNamePassword = new UsernamePasswordAuthenticationToken(data.login(), data.password());
         var auth = this.authenticationManager.authenticate(userNamePassword);
 
-        return ResponseEntity.ok().build();
+        var token = tokenService.generateToken((User) auth.getPrincipal());
+
+        return ResponseEntity.ok(new LoginResponseDTO(token));
 
     }
 
