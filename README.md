@@ -42,13 +42,17 @@ api.security.token.secret=${JWT_SECRET:my-secret-key}
     ```properties
     git clone https://github.com/GuilhermeHNS/controle-acesso-SpringBoot.git
     ```
-2. **Navegue até o diretório do projeto:**
+2.**Instale as dependencias utilizando maven**
+
+3. **Instale o [PostgresSQL]([URL](https://www.postgresql.org))**
+
+4. **Navegue até o diretório do projeto:**
     ```properties
     cd spring-security-study
     ```
-3. **Execute a aplicação usando Maven:**
+5. **Execute a aplicação usando Maven:**
     ```properties
     mvn spring-boot:run
     ```
-4. Acesse a aplicação em http://localhost:8080
+6. Acesse a aplicação em http://localhost:8080
 
