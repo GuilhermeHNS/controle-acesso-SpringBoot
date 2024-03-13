@@ -1,8 +1,8 @@
 # Spring Security Study Project
 
-[image](https://img.shields.io/badge/Spring-6DB33F?style=for-the-badge&logo=spring&logoColor=white)
-[image](https://img.shields.io/badge/PostgreSQL-316192?style=for-the-badge&logo=postgresql&logoColor=white)
-[image](https://img.shields.io/badge/json%20web%20tokens-323330?style=for-the-badge&logo=json-web-tokens&logoColor=pink)
+![image](https://img.shields.io/badge/Spring-6DB33F?style=for-the-badge&logo=spring&logoColor=white)
+![image](https://img.shields.io/badge/PostgreSQL-316192?style=for-the-badge&logo=postgresql&logoColor=white)
+![image](https://img.shields.io/badge/json%20web%20tokens-323330?style=for-the-badge&logo=json-web-tokens&logoColor=pink)
 
 Este projeto é uma aplicação de estudo desenvolvida em Spring Boot, focada na implementação e compreensão do Spring Security. A aplicação oferece funcionalidades básicas, como login, cadastro de usuários e produtos, com diferentes níveis de permissões para cada função.
 
@@ -48,7 +48,7 @@ api.security.token.secret=${JWT_SECRET:my-secret-key}
     ```
 2. **Instale as dependencias utilizando maven**
 
-3. Instale o [**PostgresSQL**]([URL](https://www.postgresql.org))
+3. Instale o [**PostgresSQL**](https://www.postgresql.org)
 
 4. **Navegue até o diretório do projeto:**
     ```properties
