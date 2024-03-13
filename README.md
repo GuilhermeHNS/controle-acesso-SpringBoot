@@ -42,9 +42,9 @@ api.security.token.secret=${JWT_SECRET:my-secret-key}
     ```properties
     git clone https://github.com/GuilhermeHNS/controle-acesso-SpringBoot.git
     ```
-2.**Instale as dependencias utilizando maven**
+2. **Instale as dependencias utilizando maven**
 
-3. **Instale o [PostgresSQL]([URL](https://www.postgresql.org))**
+3. Instale o [**PostgresSQL**]([URL](https://www.postgresql.org))
 
 4. **Navegue até o diretório do projeto:**
     ```properties
